@@ -54,23 +54,21 @@ window.onload = function () {
       1
     );
   }
-  window.setInterval(() => {
-    let output = document.querySelector(".output").contentWindow.document;
-    output.open();
-    output.write(
-      "<style>" +
-        editorCSS.getValue() +
-        "</style>" +
-        editorHTML.getValue() +
-        "<script>" +
-        editorJS.getValue() +
-        "</script>"
-    );
-    output.close();
-  }, 500);
 };
-function update() {}
-
+function update() {
+  let output = document.querySelector(".output").contentWindow.document;
+  output.open();
+  output.write(
+    "<style>" +
+      editorCSS.getValue() +
+      "</style>" +
+      editorHTML.getValue() +
+      "<script>" +
+      editorJS.getValue() +
+      "</script>"
+  );
+  output.close();
+}
 window.addEventListener("keyup", (e) => {
   localStorage.setItem("weber-html-code-lc-store", editorHTML.getValue());
   localStorage.setItem("weber-css-code-lc-store", editorCSS.getValue());
