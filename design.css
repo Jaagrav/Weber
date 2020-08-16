@@ -72,8 +72,9 @@ body {
   font-family: "Source Code Pro", monospace;
   resize: none;
   width: 50%;
-  border-radius: 7px 0 0 7px;
+  border-radius: 7px;
   border-left: 2px solid rgba(77, 76, 129, 0.37);
+  border-right: 2px solid rgba(77, 76, 129, 0.37);
   height: calc(100% - 100px);
 }
 

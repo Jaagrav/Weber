@@ -54,29 +54,35 @@ window.onload = function () {
       1
     );
   }
+  function update() {
+    document
+      .querySelector(".output")
+      .parentNode.removeChild(document.querySelector(".output"));
+    var eleme = document.createElement("iframe");
+    eleme.className = "output";
+    document.querySelector(".container").appendChild(eleme);
+    let output = document.querySelector(".output").contentWindow.document;
+    document.querySelector(".output").innerHTML = "";
+    document.querySelector(".output").contentWindow.location.reload(true);
+    output.open();
+    output.write(
+      "<style>" +
+        editorCSS.getValue() +
+        "</style><script>" +
+        editorJS.getValue() +
+        "</script>" +
+        editorHTML.getValue()
+    );
+    output.close();
+  }
 };
-function update() {
-  let output = document.querySelector(".output").contentWindow.document;
-  output.open();
-  output.write(
-    "<style>" +
-      editorCSS.getValue() +
-      "</style>" +
-      editorHTML.getValue() +
-      "<script>" +
-      editorJS.getValue() +
-      "</script>"
-  );
-  output.close();
-}
+
 window.addEventListener("keyup", (e) => {
   localStorage.setItem("weber-html-code-lc-store", editorHTML.getValue());
   localStorage.setItem("weber-css-code-lc-store", editorCSS.getValue());
   localStorage.setItem("weber-js-code-lc-store", editorJS.getValue());
 });
-window.addEventListener("keypress", () => {
-  document.querySelector(".output").contentWindow.location.reload(true);
-});
+window.addEventListener("keypress", () => {});
 
 //tab switch
 document.querySelector(".tab.html").addEventListener("click", function () {
