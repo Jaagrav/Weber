@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Nova+Mono&family=Source+Code+Pro&display=swap");
+
+* {
+  -webkit-user-drag: none;
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: rgba(255, 114, 192, 0.37);
+}
+
+:root {
+  --text-color: #ffffff;
+  --theme-color: rgb(0, 0, 0);
+}
+
+body {
+  background: var(--theme-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.editor {
+  background: rgba(77, 76, 129, 0.37);
+}
+
+.editor .tabs {
+  width: 240px;
+  margin: 20px 20px 0 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.editor .tabs .tab {
+  width: 80px;
+  background: rgba(77, 76, 129, 0.37);
+  text-align: center;
+  padding: 10px;
+  height: fit-content;
+  color: var(--text-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.editor .tabs .tab.selected {
+  background: var(--theme-color);
+}
+
+.coder {
+  position: absolute;
+  background: var(--theme-color);
+  border: 0;
+  outline: 0;
+  color: var(--text-color);
+  padding: 20px;
+  font-family: "Source Code Pro", monospace;
+  resize: none;
+  width: 50%;
+
+  height: calc(100% - 100px);
+}
+
+.ace_layer.ace_gutter-layer.ace_folding-enabled {
+  background: var(--theme-color);
+}
+
+.output {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  background: white;
+  outline: none;
+  border: 0;
+  color: white;
+}
+.ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar {
+  appearance: none;
+  background: #000;
+  cursor: e-resize !important;
+}
+
+.ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar-thumb {
+  appearance: none;
+  background: rgba(77, 76, 129, 0.37);
+  border-radius: 20px;
+  cursor: pointer;
+}
+.ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar-thumb:hover {
+  appearance: none;
+  background: rgba(102, 101, 170, 0.37);
+}
+
+.coder.html {
+  display: none;
+}
+.coder.css {
+  display: none;
+}
+.coder.js {
+  display: none;
+}
+
+.coder.show {
+  display: block;
+}
+
+.brand-logo {
+  margin: auto;
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  height: 20px;
+}
+.git-link {
+  margin: auto;
+  position: absolute;
+  left: 102px;
+  bottom: 9px;
+  height: 25px;
+  cursor: pointer;
+}
+.tweet-icon {
+  margin: auto;
+  position: absolute;
+  left: 135px;
+  bottom: 11px;
+  height: 20px;
+  cursor: pointer;
+}
+.mobile-container {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.brand-logo-mobile {
+  height: 40px;
+  margin: 40px 20px;
+}
+.mobile-container p {
+  color: #7948a8;
+  font-family: "Raleway", sans-serif;
+  margin: 0 20px;
+  font-size: 20px;
+  box-sizing: border-box;
+  width: 90%;
+  height: fit-content;
+  font-weight: 600;
+}
+.rotate-phone {
+  margin: auto;
+  height: 200px;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+@media only screen and (max-width: 450px) {
+  .container {
+    display: none;
+  }
+  .mobile-container {
+    display: block;
+  }
+}

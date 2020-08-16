@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weber - IDE for Web Devs</title>
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="editor">
+        <div class="tabs">
+          <div class="tab html selected">HTML</div>
+          <div class="tab css">CSS</div>
+          <div class="tab js">JS</div>
+        </div>
+        <div class="coder html show" id="coderHTML"></div>
+        <div class="coder css" id="coderCSS"></div>
+        <div class="coder js" id="coderJS"></div>
+        <img
+          src="./Weber.png"
+          class="brand-logo"
+          onclick="window.location.reload();"
+        />
+        <img
+          src="./git-icon.png"
+          class="git-link"
+          onclick="window.open('https://github.com/Jaagrav/Weber','_blank');"
+        />
+        <img
+          src="./twitter-icon-white-png-14.jpg.png"
+          class="tweet-icon"
+          onclick="window.open('https://twitter.com/BrotherJaagrav','_blank');"
+        />
+      </div>
+      <iframe class="output" color="white"></iframe>
+    </div>
+    <div class="mobile-container">
+      <img src="./Weber.png" class="brand-logo-mobile" />
+      <p>
+        Weber is a web-based code editor that runs on your browser in order to
+        be a realtime code editor for android. This app would always be under
+        development, in the next update, this app would support multiple coding
+        files at once, making it the first real time code editor run locally
+        with multi-file support.
+      </p>
+      <br /><br /><br />
+      <center>
+        <img
+          src="https://media2.giphy.com/media/XH4uWIEFT8h9NDhiE7/source.gif"
+          class="rotate-phone"
+        />
+        <br /><br /><br />
+        <p>Rotate Your Phone to use Weber</p>
+        <br />
+        <p>
+          Written by <a href="https://twitter.com/BrotherJaagrav">Jaagrav</a>
+        </p>
+        <br />
+      </center>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
