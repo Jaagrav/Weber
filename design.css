@@ -33,7 +33,7 @@ body {
 
 .editor .tabs {
   width: 240px;
-  margin: 20px 20px 0 10px;
+  margin: 20px 20px 0 20px;
   display: flex;
   justify-content: space-around;
 }
@@ -54,6 +54,14 @@ body {
   background: var(--theme-color);
 }
 
+.editor .tabs .tab.html {
+  border-radius: 7px 0 0 0;
+}
+
+.editor .tabs .tab.js {
+  border-radius: 0 7px 0 0;
+}
+
 .coder {
   position: absolute;
   background: var(--theme-color);
@@ -64,7 +72,8 @@ body {
   font-family: "Source Code Pro", monospace;
   resize: none;
   width: 50%;
-
+  border-radius: 7px 0 0 7px;
+  border-left: 2px solid rgba(77, 76, 129, 0.37);
   height: calc(100% - 100px);
 }
 
@@ -81,19 +90,24 @@ body {
   border: 0;
   color: white;
 }
-.ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar {
+
+.ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar,
+.output::-webkit-scrollbar {
   appearance: none;
   background: #000;
   cursor: e-resize !important;
 }
 
-.ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar-thumb {
+.ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar-thumb,
+.output::-webkit-scrollbar-thumb {
   appearance: none;
   background: rgba(77, 76, 129, 0.37);
   border-radius: 20px;
   cursor: pointer;
 }
-.ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar-thumb:hover {
+
+.ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar-thumb:hover,
+.output::-webkit-scrollbar-thumb:hover {
   appearance: none;
   background: rgba(102, 101, 170, 0.37);
 }
@@ -101,9 +115,11 @@ body {
 .coder.html {
   display: none;
 }
+
 .coder.css {
   display: none;
 }
+
 .coder.js {
   display: none;
 }
@@ -119,6 +135,7 @@ body {
   bottom: 12px;
   height: 20px;
 }
+
 .git-link {
   margin: auto;
   position: absolute;
@@ -127,6 +144,7 @@ body {
   height: 25px;
   cursor: pointer;
 }
+
 .tweet-icon {
   margin: auto;
   position: absolute;
@@ -135,6 +153,7 @@ body {
   height: 20px;
   cursor: pointer;
 }
+
 .mobile-container {
   display: none;
   height: 100%;
@@ -146,10 +165,12 @@ body {
   left: 0;
   bottom: 0;
 }
+
 .brand-logo-mobile {
   height: 40px;
   margin: 40px 20px;
 }
+
 .mobile-container p {
   color: #7948a8;
   font-family: "Raleway", sans-serif;
@@ -160,19 +181,23 @@ body {
   height: fit-content;
   font-weight: 600;
 }
+
 .rotate-phone {
   margin: auto;
   height: 200px;
   margin: auto;
 }
+
 a {
   text-decoration: none;
   color: #ffffff;
 }
+
 @media only screen and (max-width: 450px) {
   .container {
     display: none;
   }
+
   .mobile-container {
     display: block;
   }
