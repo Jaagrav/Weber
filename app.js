@@ -68,10 +68,11 @@ window.onload = function () {
     output.write(
       "<style>" +
         editorCSS.getValue() +
-        "</style><script>" +
+        "</style>" +
+        editorHTML.getValue() +
+      "<script>" +
         editorJS.getValue() +
-        "</script>" +
-        editorHTML.getValue()
+        "</script>"
     );
     output.close();
   }
