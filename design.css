@@ -94,14 +94,12 @@ body {
 
 .ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar,
 .output::-webkit-scrollbar, .ace_scrollbar.ace_scrollbar-v:hover {
-  appearance: none !important;
   background: #000 !important;
   cursor: e-resize !important;
 }
 
 .ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar-thumb,
 .output::-webkit-scrollbar-thumb, .ace_scrollbar.ace_scrollbar-v {
-  appearance: none !important;
   background: rgba(77, 76, 129, 0.37) !important;
   border-radius: 20px !important;
   cursor: pointer !important;
@@ -109,7 +107,6 @@ body {
 
 .ace_scrollbar.ace_scrollbar-h::-webkit-scrollbar-thumb:hover,
 .output::-webkit-scrollbar-thumb:hover, .ace_scrollbar.ace_scrollbar-v:hover {
-  appearance: none !important;
   background: rgba(102, 101, 170, 0.37) !important;
 }
 
